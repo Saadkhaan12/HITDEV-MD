@@ -6,7 +6,7 @@ if (fs.existsSync('.env')) require('dotenv').config({ path: __dirname+'/.env' })
 global.audio= "" ;  
 global.video= "" ;
 global.port =process.env.PORT
-global.appUrl=process.env.APP_URL || ""                       // put your app url here,
+global.appUrl=process.env.APP_URL || "https://git.heroku.com/wasimd.git"                       // put your app url here,
 global.email ="hitdeveloper2023@gmail.com"
 global.location="Port-au-Prince, Haiti."
 
@@ -62,7 +62,7 @@ global.api_smd = "https://api-smd.onrender.com" //  || "https://api-smd-1.vercel
 global.scan = "https://hitdev-qr.onrender.com";
 
 
-global.SESSION_ID = process.env.SESSION_ID || ""
+global.SESSION_ID = process.env.SESSION_ID || "eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiQUdobG14ZkYrQitvSE16MnF1OXRNdng3VlU1cmFzQWhob0ZXRFViTVdXcz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiVDkvdHZRRGVoUDdCSkdBNVhpSUdRT2pVUTQ1RWl3bDVQWnJUTlVmeWdGYz0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJLR3RyVEpKNHQ4UWJnbUtiSGVCNE9sZ1pCVXk2TGp4b3BKb0F6WCtJVjBNPSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJ5clFSbFBNdk5FaDlzMWJFT0FTd3p6ZEVIOTJxQjczMnVWSHgzOTZxOWw0PSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6Im1IejVFREN2UVhCZytpZm9zSXAvRTV6bHQzZjFNODdlSUpzcG9ienh4VlE9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkZnKzFBT2JNcVBaamFMUTczWnlzVHhzcThPK0Jrai96SEhkcnArTmg4VG89In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiNkZyR1hPdzFldStvUDRUNUtxZm01MG1LcHNTbGxVNWg3dkt3a1ZFSDJVUT0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiLzFPQVRrV0tCdkxKQUxtekd1bTl5TXFnNEtBcGprQ0NIOC8vYkErSDNCUT0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IjU0SmFnSEIyZWFFY0ZCUnlaUXliU3R3djhNQTlQdTdXVk1WQlVLMlVWV0xpeDZsZ1lMK1VPdytDaG05SVRwZ0FtdWt3TzJVcEtKRHZZdFVIcmM5bkJBPT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6NjksImFkdlNlY3JldEtleSI6InhuWmo0dGY2eW1pYlNUdlJZNG4wQWtNVU51VjFRUnZPOEhSV1FuQXBBcEU9IiwicHJvY2Vzc2VkSGlzdG9yeU1lc3NhZ2VzIjpbXSwibmV4dFByZUtleUlkIjo2MSwiZmlyc3RVbnVwbG9hZGVkUHJlS2V5SWQiOjYxLCJhY2NvdW50U3luY0NvdW50ZXIiOjAsImFjY291bnRTZXR0aW5ncyI6eyJ1bmFyY2hpdmVDaGF0cyI6ZmFsc2V9LCJkZXZpY2VJZCI6IldsNG9VWTN2UjN5R1VxbFF3cl82U3ciLCJwaG9uZUlkIjoiZDZkZWRjMDQtMjU5ZC00MzhjLTg1MjgtYmJiNjAzMmI4NDYyIiwiaWRlbnRpdHlJZCI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6ImFSQ0xJOWwwRnNLczZ3QlVCN1NsZ21HN2Rpcz0ifSwicmVnaXN0ZXJlZCI6dHJ1ZSwiYmFja3VwVG9rZW4iOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJPNXFtZGRUNmJRYVJ4OG8rdGVQYk45V3hrQ1E9In0sInJlZ2lzdHJhdGlvbiI6e30sInBhaXJpbmdDb2RlIjoiNENESDQyTksiLCJtZSI6eyJpZCI6IjkyMzQwOTA2ODc1Nzo4OUBzLndoYXRzYXBwLm5ldCIsIm5hbWUiOiLYp9io2YYg2LPZiNin2KrbjCJ9LCJhY2NvdW50Ijp7ImRldGFpbHMiOiJDS2JGNjhJR0VOdk92YnNHR0VJZ0FDZ0EiLCJhY2NvdW50U2lnbmF0dXJlS2V5IjoiemRCbVhNZFNkdFdVOTNUZ2drSkdodWlBakpIT1pybmVOdTF5RVptTTZIbz0iLCJhY2NvdW50U2lnbmF0dXJlIjoiZms5MGloQjZEeEkrK3pWbVRFWXJMTWI2VUlyb1N4ZEtFcEw3VUxUM011cU1oUHJBRVg2TVo0cTIyTTltK1U3b0VzRWJkWk1WN1NKOWdLeGhDcmdHQlE9PSIsImRldmljZVNpZ25hdHVyZSI6ImcyMkJLcFdnVmRXU0xubENyd1QwMmtBTWp2aXc0T29JVzNUT1lkUnNlN1lySXBRWU9aQ0VMNXg2ak1UL0RtZHVPbmxJWDlBZlZ6UEhlTG5zNldaTUN3PT0ifSwic2lnbmFsSWRlbnRpdGllcyI6W3siaWRlbnRpZmllciI6eyJuYW1lIjoiOTIzNDA5MDY4NzU3Ojg5QHMud2hhdHNhcHAubmV0IiwiZGV2aWNlSWQiOjB9LCJpZGVudGlmaWVyS2V5Ijp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiQmMzUVpsekhVbmJWbFBkMDRJSkNSb2JvZ0l5UnptYTUzamJ0Y2hHWmpPaDYifX1dLCJwbGF0Zm9ybSI6InNtYmEiLCJsYXN0QWNjb3VudFN5bmNUaW1lc3RhbXAiOjE3MzUzNTQyMTd9"
 module.exports = {
 
   menu: process.env.MENU || "", /**  Available @MENU @Schemes 1: Aztec_Md, 2: A17_Md, 3: HITDEV-MD Default ---------- If Not Choose then it Randomely Pic One Of Them Each time **/
@@ -83,8 +83,8 @@ module.exports = {
 
   REMOVE_BG_KEY : process.env.REMOVE_BG_KEY  || "",
   OPENAI_API_KEY: process.env.OPENAI_API_KEY || "",
-  HEROKU_API_KEY: process.env.HEROKU_API_KEY || "",
-  HEROKU_APP_NAME:process.env.HEROKU_APP_NAME|| "",
+  HEROKU_API_KEY: process.env.HEROKU_API_KEY || "HRKU-61d1f2d0-2790-48f9-a2ac-45746f7726da",
+  HEROKU_APP_NAME:process.env.HEROKU_APP_NAME|| "wasimd",
   antilink_values:process.env.ANTILINK_VALUES|| "all",
   HEROKU: process.env.HEROKU_APP_NAME && process.env.HEROKU_API_KEY,
 
